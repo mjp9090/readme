@@ -14,7 +14,7 @@ git log									查看本仓库的提交日志(commit右侧的是指向这个提交的哈希值)
 git log --pretty=short					只显示提交信息的第一行
 git reset --hard HEAD					在Git中，用HEAD表示当前版本
 	HEAD^								上一个版本
-	HEAD^^								上上一个版本
+	HEAD^^								上两个版本
 	HEAD~100							上100个版本
 git reset --hard 3628164				根据commit id找回最新版本
 git reflog								记录每一次命令
