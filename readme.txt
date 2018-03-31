@@ -32,6 +32,7 @@ git remote add origin git@github.com:mjp9090/BroadcastTest.git		本地库和远程库关
 git push -u origin master				把本地库的所有内容推送到远程库上
 git push origin master					提交远程库
 git clone git@github.com:mjp9090/BroadcastTest.git	克隆一个本地库。还可以用git clone https://github.com/michaelliao/gitskills.git这样的地址
+git fetch origin branch					从远程库下载文件
 		
 git checkout -b dev					命令加上-b参数表示创建并切换，相当于以下两条命令git branch dev；git checkout dev
 git branch dev						创建分支
