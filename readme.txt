@@ -10,7 +10,7 @@ git init											°ÑÕâ¸öÄ¿Â¼³õÊ¼»¯Îª²Ö¿â
 ls -ah 												²é¿´Òş²ØÎÄ¼ş
 git status											²é¿´µ±Ç°×´Ì¬
 git log												²é¿´±¾²Ö¿âµÄÌá½»ÈÕÖ¾(commitÓÒ²àµÄÊÇÖ¸ÏòÕâ¸öÌá½»µÄ¹şÏ£Öµ)
-git diff											²é¿´¸ü¸ÄÇ°ºóµÄ²î±ğ
+
 git diff HEAD -- readme.txt							²é¿´¹¤×÷ÇøºÍ°æ±¾¿âÀïÃæ×îĞÂ°æ±¾µÄÇø±ğ
 git log --pretty=short								Ö»ÏÔÊ¾Ìá½»ĞÅÏ¢µÄµÚÒ»ĞĞ
 git reflog											¼ÇÂ¼Ã¿Ò»´ÎÃüÁî
@@ -42,6 +42,10 @@ git merge --no-ff -m "merge with no-ff" dev			ºÏ²¢·ÖÖ®½ûÓÃfast forward.ºÏ²¢·ÖÖ§Ê
 ssh-keygen -t rsa -C "youremail@example.com"						´´½¨SSH Key
 git remote add origin git@github.com:mjp9090/readme.git				±¾µØ¿âºÍÔ¶³Ì¿â¹ØÁª
 git clone git@github.com:mjp9090/readme.git							´ÓÔ¶³Ì¿â½«´úÂëÏÂÔØµ½±¾µØ¡£»¹¿ÉÒÔÓÃgit clone https://github.com/michaelliao/gitskills.gitÕâÑùµÄµØÖ·
+git fetch origin master												½«Ô¶³Ì¿âĞŞ¸ÄµÄ´úÂëÍ¬²½µ½±¾µØ¡£
+git diff origin/master											    ²é¿´Ô¶³Ì¿âĞŞ¸ÄµÄÄÚÈİ
+git merge origin/master												°Ñorigin/master·ÖÖ§ºÏ²¢µ½Ö÷·ÖÖ§
+git pull origin master												´ÓÔ¶³Ì¿â»ñÈ¡×îĞÂ´úÂë²¢ÇÒºÏ²¢µ½±¾µØ£¬Ïàµ±ÓÚºÏ²¢Ö´ĞĞfetch mergeÁ½¸öÃüÁî
 git push -u origin master											ÓÉÓÚÔ¶³Ì¿âÊÇ¿ÕµÄ£¬ÎÒÃÇµÚÒ»´ÎÍÆËÍmaster·ÖÖ§Ê±£¬¼ÓÉÏÁË-u²ÎÊı£¬Git²»µ«»á°Ñ±¾µØµÄmaster·ÖÖ§ÄÚÈİÍÆËÍµÄÔ¶³ÌĞÂµÄmaster·ÖÖ§£¬»¹»á°Ñ±¾µØµÄmaster·ÖÖ§ºÍÔ¶³ÌµÄmaster·ÖÖ§¹ØÁªÆğÀ´£¬ÔÚÒÔºóµÄÍÆËÍ»òÕßÀ­È¡Ê±¾Í¿ÉÒÔ¼ò»¯ÃüÁî¡£
 git push origin master												Ìá½»Ô¶³Ì¿â		
 git remote															²é¿´Ô¶³Ì¿âµÄĞÅÏ¢
