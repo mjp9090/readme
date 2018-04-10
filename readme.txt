@@ -34,18 +34,19 @@ git merge dev										把dev分支合并到master分支上
 git checkout -b dev									命令加上-b参数表示创建并切换，相当于以下两条命令git branch dev；git checkout dev
 git branch -d dev									删除dev分支
 git branch -r -D origin/BranchName					删除本地的远程分支
-git push origin -d BranchName						远程删除git服务器上的分支
+
 git log --graph --pretty=oneline --abbrev-commit	用带参数的git log也可以看到分支的合并情况
 git merge --no-ff -m "merge with no-ff" dev			合并分之禁用fast forward.合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并
 
 远程库
-git push origin master												提交远程库		
 ssh-keygen -t rsa -C "youremail@example.com"						创建SSH Key
 git remote add origin git@github.com:mjp9090/readme.git				本地库和远程库关联
-git push -u origin master											把本地库的所有内容推送到远程库上
-git clone git@github.com:mjp9090/readme.git							克隆一个本地库。还可以用git clone https://github.com/michaelliao/gitskills.git这样的地址
+git clone git@github.com:mjp9090/readme.git							从远程库将代码下载到本地。还可以用git clone https://github.com/michaelliao/gitskills.git这样的地址
+git push -u origin master											由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+git push origin master												提交远程库		
 git remote															查看远程库的信息
 git remote -v														查看远程库的详细信息
+git push origin -d BranchName										删除远程git服务器上的分支
 
 隐藏工作现场
 git stash											把当前工作现场“储藏”起来
