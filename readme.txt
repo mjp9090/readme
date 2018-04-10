@@ -4,19 +4,6 @@ git config --global user.email "email@example.com"	配置邮箱
 git init											把这个目录初始化为仓库
 .gitignore											要忽略的文件名填进去，Git在提交时就会自动忽略这些文件。
 
-
-
-查看
-ls -ah 												查看隐藏文件
-git status											查看当前状态
-git log												查看本仓库的提交日志(commit右侧的是指向这个提交的哈希值)
-
-git diff HEAD -- readme.txt							查看工作区和版本库里面最新版本的区别
-git log --pretty=short								只显示提交信息的第一行
-git reflog											记录每一次命令
-git log build.gradle								显示指定目录、文件的日志
-git log -p build.gradle								显示文件的改动，可查看文件的提交日志和提交前后的差别
-
 添加文件
 git add												向缓存区中添加文件
 	git add build.gradle								提交文件
@@ -80,13 +67,23 @@ git reset --hard HEAD								在Git中，用HEAD表示当前版本
 	HEAD~100											上100个版本
 git reset --hard 3628164							根据commit id找回最新版本
 
+
+查看
+ls -ah 												查看隐藏文件
+git status											查看当前状态
+git log												查看本仓库的提交日志(commit右侧的是指向这个提交的哈希值)
+git diff HEAD -- readme.txt							查看工作区和版本库里面最新版本的区别
+git log --pretty=short								只显示提交信息的第一行
+git reflog											记录每一次命令
+git log build.gradle								显示指定目录、文件的日志
+git log -p build.gradle								显示文件的改动，可查看文件的提交日志和提交前后的差别
+
 git checkout -- readme.txt							丢弃在工作区的修改（命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令）
 git reset HEAD readme.txt							把暂存区的文件修改撤销掉（unstage），重新放回工作区
 git reset HEAD 										把暂存区的所有文件修改撤销掉（unstage），重新放回工作区
 git rm test.txt										从版本库中删除该文件
 git commit -m "remove test.txt"						提交删除
 git checkout -- test.txt							用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
-
 		
 git config --global color.ui true					让Git显示颜色，会让命令输出看起来更醒目
 
