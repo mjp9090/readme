@@ -1,26 +1,70 @@
+¹¤×÷Çø£¨Working Directory£©
+¾ÍÊÇÄãÔÚµçÄÔÀïÄÜ¿´µ½µÄÄ¿Â¼
+
+°æ±¾¿â£¨Repository£©
+¹¤×÷ÇøÓĞÒ»¸öÒş²ØÄ¿Â¼.git£¬Õâ¸ö²»Ëã¹¤×÷Çø£¬¶øÊÇGitµÄ°æ±¾¿â
+
+GitµÄ°æ±¾¿âÀï´æÁËºÜ¶à¶«Î÷£¬ÆäÖĞ×îÖØÒªµÄ¾ÍÊÇ³ÆÎªstage£¨»òÕß½Ğindex£©µÄÔİ´æÇø
+git addÃüÁîÊµ¼ÊÉÏ¾ÍÊÇ°ÑÒªÌá½»µÄËùÓĞĞŞ¸Ä·Åµ½Ôİ´æÇø£¨Stage£©£¬È»ºó£¬Ö´ĞĞgit commit¾Í¿ÉÒÔÒ»´ÎĞÔ°ÑÔİ´æÇøµÄËùÓĞĞŞ¸ÄÌá½»µ½·ÖÖ§¡£
+
+
 ÅäÖÃ
+git config --list									ÅäÖÃÎÄ¼ş
+git config --list --global							²é¿´È«¾ÖÅäÖÃÎÄ¼ş
 git config --global user.name "Your Name"			ÅäÖÃĞÕÃû			
-git config --global user.email "email@example.com"	ÅäÖÃÓÊÏä		
+git config --global user.email "email@example.com"	ÅäÖÃÓÊÏä
+git config --global alias.st status					ÅäÖÃÃüÁî¼ò³Æ		
 git init											°ÑÕâ¸öÄ¿Â¼³õÊ¼»¯Îª²Ö¿â
 .gitignore											ÒªºöÂÔµÄÎÄ¼şÃûÌî½øÈ¥£¬GitÔÚÌá½»Ê±¾Í»á×Ô¶¯ºöÂÔÕâĞ©ÎÄ¼ş¡£
 
-Ìí¼ÓÎÄ¼ş
+Ìá½»ÎÄ¼ş
 git add												Ïò»º´æÇøÖĞÌí¼ÓÎÄ¼ş
 	git add build.gradle								Ìá½»ÎÄ¼ş
 	git add app											Ìá½»Ä¿Â¼
 	git add .											Ìá½»ËùÓĞÎÄ¼ş
 	
 Ìá½»ÎÄ¼ş	
-git commit -m "First commit"						²ÎÊı-mºóÃæÊäÈëµÄÊÇ±¾´ÎÌá½»µÄËµÃ÷£¬¿ÉÒÔÊäÈëÈÎÒâÄÚÈİ
+git commit -m "message"						²ÎÊı-mºóÃæÊäÈëµÄÊÇ±¾´ÎÌá½»µÄËµÃ÷£¬¿ÉÒÔÊäÈëÈÎÒâÄÚÈİ
+
+messageµÄÃüÃû¹æÔòtype(scope):subject
+type³£ÓÃÀàĞÍ£º
+feat£º		ĞÂ¹¦ÄÜ
+fix£º		ĞŞ¸´BUG
+style:		¸ñÊ½
+refactor:	´úÂëÖØ¹¹
+chore:		ÏîÄ¿¹¹½¨
+
+scope£º		Ä£¿é
+
+subject£º	ÃèÊöĞÅÏ¢
+
+Ê¹ÓÃCZĞèÒªÏÈ°²×°npm
+git clone --recursive git://github.com/isaacs/npm.git
+
+
+npm install -g commitizen
+
+commitizen init cz-conventional-changelog--save-exact
+
+npm init
+
 
 ·ÖÖ§¹ÜÀí
+±¾µØ·ÖÖ§£¨Ö¸ÏòÌá½»¶ÔÏóµÄÒ»¸ö¿É±äÖ¸Õë£©
 git branch dev										´´½¨·ÖÖ§
 git branch											²é¿´µ±Ç°·ÖÖ§
 git checkout master									ÇĞ»»µ½master·ÖÖ§
-git merge dev										°Ñdev·ÖÖ§ºÏ²¢µ½master·ÖÖ§ÉÏ
 git checkout -b dev									ÃüÁî¼ÓÉÏ-b²ÎÊı±íÊ¾´´½¨²¢ÇĞ»»£¬Ïàµ±ÓÚÒÔÏÂÁ½ÌõÃüÁîgit branch dev£»git checkout dev
+git merge dev										°Ñdev·ÖÖ§ºÏ²¢µ½master·ÖÖ§ÉÏ
+ºÏ²¢Ê±Óöµ½³åÍ»(CONFLICT)£¬ÊÖ¹¤½â¾ö³åÍ»ºóÔÚ½øĞĞmerge
 git branch -d dev									É¾³ıdev·ÖÖ§
+
+Ô¶³Ì·ÖÖ§£¨Ö¸ÏòÔ¶³Ì²Ö¿âÖĞÎÄ¼şµÄÖ¸Õë£¬Êµ¼Ê¿ª·¢ÖĞÃ¿Ò»¸ö±¾µØ·ÖÖ§¶¼Ó¦¸Ã´æÔÚÒ»¸öÓëÔ¶³Ì·ÖÖ§µÄ¶ÔÓ¦¹ØÏµ£©
 git branch -r -D origin/BranchName					É¾³ı±¾µØµÄÔ¶³Ì·ÖÖ§
+
+
+
+ 
 
 git log --graph --pretty=oneline --abbrev-commit	ÓÃ´ø²ÎÊıµÄgit logÒ²¿ÉÒÔ¿´µ½·ÖÖ§µÄºÏ²¢Çé¿ö
 git merge --no-ff -m "merge with no-ff" dev			ºÏ²¢·ÖÖ®½ûÓÃfast forward.ºÏ²¢·ÖÖ§Ê±£¬¼ÓÉÏ--no-ff²ÎÊı¾Í¿ÉÒÔÓÃÆÕÍ¨Ä£Ê½ºÏ²¢£¬ºÏ²¢ºóµÄÀúÊ·ÓĞ·ÖÖ§£¬ÄÜ¿´³öÀ´Ôø¾­×ö¹ıºÏ²¢£¬¶øfast forwardºÏ²¢¾Í¿´²»³öÀ´Ôø¾­×ö¹ıºÏ²¢
@@ -29,6 +73,7 @@ git merge --no-ff -m "merge with no-ff" dev			ºÏ²¢·ÖÖ®½ûÓÃfast forward.ºÏ²¢·ÖÖ§Ê
 ssh-keygen -t rsa -C "youremail@example.com"						´´½¨SSH Key
 git remote add origin git@github.com:mjp9090/readme.git				±¾µØ¿âºÍÔ¶³Ì¿â¹ØÁª
 git clone git@github.com:mjp9090/readme.git							´ÓÔ¶³Ì¿â½«´úÂëÏÂÔØµ½±¾µØ¡£»¹¿ÉÒÔÓÃgit clone https://github.com/michaelliao/gitskills.gitÕâÑùµÄµØÖ·
+git clone -b dev git@github.com:mjp9090/readme.git					´ÓÔ¶³Ì¿â¿ËÂ¡ÌØ¶¨·ÖÖ§
 git fetch origin master												½«Ô¶³Ì¿âĞŞ¸ÄµÄ´úÂëÍ¬²½µ½±¾µØ¡£
 git diff origin/master											    ²é¿´Ô¶³Ì¿âĞŞ¸ÄµÄÄÚÈİ
 git merge origin/master												°Ñorigin/master·ÖÖ§ºÏ²¢µ½Ö÷·ÖÖ§
@@ -48,16 +93,16 @@ git stash apply stash@{0}							¿ÉÒÔ¶à´Îstash£¬»Ö¸´µÄÊ±ºò£¬ÏÈÓÃgit stash list²é¿
 git branch -D feature-vulcan						GitÓÑÇéÌáĞÑ£¬feature-vulcan·ÖÖ§»¹Ã»ÓĞ±»ºÏ²¢£¬Èç¹ûÉ¾³ı£¬½«¶ªÊ§µôĞŞ¸Ä£¬Èç¹ûÒªÇ¿ĞĞÉ¾³ı£¬ĞèÒªÊ¹ÓÃÃüÁîgit branch -D feature-vulcan
 
 ±êÇ©
-git tag v1.0										´´½¨±êÇ©
+git tag -a v0.1 -m "version 0.1 released" //3628164	´´½¨´øÓĞËµÃ÷µÄ±êÇ©£¬ÓÃ-aÖ¸¶¨±êÇ©Ãû£¬-mÖ¸¶¨ËµÃ÷ÎÄ×Ö
+git push origin --tags								Ò»´ÎĞÔÍÆËÍÈ«²¿ÉĞÎ´ÍÆËÍµ½Ô¶³ÌµÄ±¾µØ±êÇ©
 git tag												²é¿´ËùÓĞ±êÇ©
+git tag -l ±êÇ©										²é¿´ÌØ¶¨±êÇ©
 git log --pretty=oneline --abbrev-commit			ÕÒµ½ÀúÊ·Ìá½»µÄcommit id
-git tag v0.9 6224937								Òª¶Ôadd mergeÕâ´ÎÌá½»´ò±êÇ©£¬Ëü¶ÔÓ¦µÄcommit idÊÇ6224937
+git tag -a v0.9 6224937 -m "version 0.9 released"	Òª¶Ôadd mergeÕâ´ÎÌá½»´ò±êÇ©£¬Ëü¶ÔÓ¦µÄcommit idÊÇ6224937
 git show v0.9										²é¿´±êÇ©ĞÅÏ¢
-git tag -a v0.1 -m "version 0.1 released" 3628164				´´½¨´øÓĞËµÃ÷µÄ±êÇ©£¬ÓÃ-aÖ¸¶¨±êÇ©Ãû£¬-mÖ¸¶¨ËµÃ÷ÎÄ×Ö
 git tag -s v0.2 -m "signed version 0.2 released" fec145a		Ç©Ãû²ÉÓÃPGPÇ©Ãû£¬Òò´Ë£¬±ØĞëÊ×ÏÈ°²×°gpg£¨GnuPG£©£¬Èç¹ûÃ»ÓĞÕÒµ½gpg£¬»òÕßÃ»ÓĞgpgÃÜÔ¿¶Ô£¬¾Í»á±¨´í£¬Èç¹û±¨´í£¬Çë²Î¿¼GnuPG°ïÖúÎÄµµÅäÖÃKey
 git tag -d v0.1										Èç¹û±êÇ©´ò´íÁË£¬Ò²¿ÉÒÔÉ¾³ı
 git push origin v1.0								ÍÆËÍÄ³¸ö±êÇ©µ½Ô¶³Ì
-git push origin --tags								Ò»´ÎĞÔÍÆËÍÈ«²¿ÉĞÎ´ÍÆËÍµ½Ô¶³ÌµÄ±¾µØ±êÇ©
 git push origin :refs/tags/v0.9						Èç¹û±êÇ©ÒÑ¾­ÍÆËÍµ½Ô¶³Ì£¬ÏÈ´Ó±¾µØÉ¾³ı£¬È»ºó£¬´ÓÔ¶³ÌÉ¾³ı
 
 »¹Ô­
@@ -66,24 +111,27 @@ git reset --hard HEAD								ÔÚGitÖĞ£¬ÓÃHEAD±íÊ¾µ±Ç°°æ±¾
 	HEAD^^												ÉÏÁ½¸ö°æ±¾
 	HEAD~100											ÉÏ100¸ö°æ±¾
 git reset --hard 3628164							¸ù¾İcommit idÕÒ»Ø×îĞÂ°æ±¾
+git reset HEAD readme.txt							°ÑÔİ´æÇøµÄÎÄ¼şĞŞ¸Ä³·Ïúµô£¨unstage£©£¬ÖØĞÂ·Å»Ø¹¤×÷Çø
+git reset HEAD 										°ÑÔİ´æÇøµÄËùÓĞÎÄ¼şĞŞ¸Ä³·Ïúµô£¨unstage£©£¬ÖØĞÂ·Å»Ø¹¤×÷Çø
 
+É¾³ıd
+git rm test.txt										´Ó°æ±¾¿âÖĞÉ¾³ı¸ÃÎÄ¼ş
+
+git checkout -- readme.txt							ÓÃ°æ±¾¿âÀïµÄ°æ±¾Ìæ»»¹¤×÷ÇøµÄ°æ±¾£¨ÃüÁîÖĞµÄ--ºÜÖØÒª£¬Ã»ÓĞ--£¬¾Í±ä³ÉÁË¡°ÇĞ»»µ½ÁíÒ»¸ö·ÖÖ§¡±µÄÃüÁî£©
 
 ²é¿´
 ls -ah 												²é¿´Òş²ØÎÄ¼ş
 git status											²é¿´µ±Ç°×´Ì¬
-git log												²é¿´±¾²Ö¿âµÄÌá½»ÈÕÖ¾(commitÓÒ²àµÄÊÇÖ¸ÏòÕâ¸öÌá½»µÄ¹şÏ£Öµ)
+git diff											²é¿´Ã»ÓĞÌí¼ÓÖÁÔİ´æÇøµÄĞŞ¸Ä
+dit diff --staged									²é¿´Ìí¼ÓÖÁÔİ´æÇøµÄĞŞ¸Ä
 git diff HEAD -- readme.txt							²é¿´¹¤×÷ÇøºÍ°æ±¾¿âÀïÃæ×îĞÂ°æ±¾µÄÇø±ğ
-git log --pretty=short								Ö»ÏÔÊ¾Ìá½»ĞÅÏ¢µÄµÚÒ»ĞĞ
+git log												²é¿´±¾²Ö¿âµÄÌá½»ÈÕÖ¾(commitÓÒ²àµÄÊÇÖ¸ÏòÕâ¸öÌá½»µÄ¹şÏ£Öµ)
+git log --pretty=oneline | grep ÎÄ¼şÃû				Ö»ÏÔÊ¾Ìá½»ĞÅÏ¢µÄµÚÒ»ĞĞ
 git reflog											¼ÇÂ¼Ã¿Ò»´ÎÃüÁî
 git log build.gradle								ÏÔÊ¾Ö¸¶¨Ä¿Â¼¡¢ÎÄ¼şµÄÈÕÖ¾
 git log -p build.gradle								ÏÔÊ¾ÎÄ¼şµÄ¸Ä¶¯£¬¿É²é¿´ÎÄ¼şµÄÌá½»ÈÕÖ¾ºÍÌá½»Ç°ºóµÄ²î±ğ
 
-git checkout -- readme.txt							¶ªÆúÔÚ¹¤×÷ÇøµÄĞŞ¸Ä£¨ÃüÁîÖĞµÄ--ºÜÖØÒª£¬Ã»ÓĞ--£¬¾Í±ä³ÉÁË¡°ÇĞ»»µ½ÁíÒ»¸ö·ÖÖ§¡±µÄÃüÁî£©
-git reset HEAD readme.txt							°ÑÔİ´æÇøµÄÎÄ¼şĞŞ¸Ä³·Ïúµô£¨unstage£©£¬ÖØĞÂ·Å»Ø¹¤×÷Çø
-git reset HEAD 										°ÑÔİ´æÇøµÄËùÓĞÎÄ¼şĞŞ¸Ä³·Ïúµô£¨unstage£©£¬ÖØĞÂ·Å»Ø¹¤×÷Çø
-git rm test.txt										´Ó°æ±¾¿âÖĞÉ¾³ı¸ÃÎÄ¼ş
-git commit -m "remove test.txt"						Ìá½»É¾³ı
-git checkout -- test.txt							ÓÃ°æ±¾¿âÀïµÄ°æ±¾Ìæ»»¹¤×÷ÇøµÄ°æ±¾£¬ÎŞÂÛ¹¤×÷ÇøÊÇĞŞ¸Ä»¹ÊÇÉ¾³ı£¬¶¼¿ÉÒÔ¡°Ò»¼ü»¹Ô­¡±¡£
-		
+
+ÏÔÊ¾		
 git config --global color.ui true					ÈÃGitÏÔÊ¾ÑÕÉ«£¬»áÈÃÃüÁîÊä³ö¿´ÆğÀ´¸üĞÑÄ¿
 
