@@ -11,7 +11,7 @@ GIT常用命令
 
 ----------
 
-###配置###
+### 配置
 
 - 查看配置文件:```git config --list```								
 - 查看全局配置文件: ```git config --list --global```					
