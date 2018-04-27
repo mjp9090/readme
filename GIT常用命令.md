@@ -25,22 +25,19 @@ GIT常用命令
 ----------
 
 ### 提交文件
-- 向暂存区中添加文件:												
- - 提交单个文件： ```git add build.gradle```
- - 提交目录：```git add app```											
- - 提交所有文件:```git add .```								
+- 向暂存区中添加文件:
+												
+		提交单个文件： git add build.gradle
+		提交目录：git add app											
+		提交所有文件:git add .
+								
 - 将暂存区文件提交版本库： ```git commit -m "message"``` 参数-m后面输入的是本次提交的说明，可以输入任意内容
 
 - message的命名规则:type(scope):subject
-- 常用类型:```type```
- - 新功能:```feat```	
- - 修复BUG:```fix```		
- - 格式:```style:```		
- - 代码重构:```refactor```	
- - 项目构建:```chore```	
-- 模块:```scope```
-		
-- 描述信息：```subject```
+				
+		常用类型:type(1. 新功能:feat; 2. 修复BUG:fix; 3. 格式:style; 4. 代码重构:refactor; 5. 项目构建:chore)
+		模块:scope 
+		描述信息：subject
 
 git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。
 
@@ -115,9 +112,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 ----------
 
 ### 还原
-- 还原，HEAD表示当前版本：```git reset --hard HEAD```							
-	- 上一个版本:```HEAD^	```											
-	- 上两个版本:```HEAD^^```												
+- 还原，HEAD表示当前版本：```git reset --hard HEAD```									
 - 根据commit id还原最新版本：```git reset --hard 3628164```							
 - 把暂存区的文件修改撤销掉（unstage），重新放回工作区:```git reset HEAD readme.txt```							
 - 把暂存区的所有文件修改撤销掉（unstage），重新放回工作区:```git reset HEAD``` 								 
