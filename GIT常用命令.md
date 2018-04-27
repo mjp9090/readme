@@ -1,5 +1,3 @@
-[TOC]
-
 GIT常用命令
 ==========
 名词解释
@@ -49,7 +47,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ~~npm install -g commitizen~~
 
-~~commitizen init cz-conventional-changelog--save-exact~~
+[^1]: commitizen init cz-conventional-changelog--save-exact
 
 ~~npm init~~
 
@@ -142,5 +140,4 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 ----------
 
 ### 显示		
-- 让Git显示颜色，会让命令输出看起来更醒目:```git config --global color.ui true```					
-
+- 让Git显示颜色，会让命令输出看起来更醒目:```git config --global color.ui true```		
