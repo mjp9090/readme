@@ -32,7 +32,7 @@ GIT常用命令
 		提交所有文件:git add .
 								
 - 将暂存区文件提交版本库： ```git commit -m "message"```
->参数-m后面输入的是本次提交的说明，可以输入任意内容
+- 参数-m后面输入的是本次提交的说明，可以输入任意内容
 
 - message的命名规则:type(scope):subject
 				
