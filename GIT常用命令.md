@@ -41,15 +41,17 @@ GIT常用命令
 
 git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。
 
-; 使用CZ需要先安装npm(此处未测试成功）
+[= 使用CZ需要先安装npm(此处未测试成功) =]
 
-; git clone --recursive git://github.com/isaacs/npm.git
+~~git clone --recursive git://github.com/isaacs/npm.git~~
 
-; npm install -g commitizen
+npm install -g commitizen
 
-; commitizen init cz-conventional-changelog--save-exact
+commitizen init cz-conventional-changelog--save-exact
 
-; npm init
+npm init
+
+
 
 ----------
 
