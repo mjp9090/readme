@@ -47,7 +47,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ~~npm install -g commitizen~~
 
-[ ^init]: commitizen init cz-conventional-changelog--save-exact
+~~commitizen init cz-conventional-changelog--save-exact~~
 
 ~~npm init~~
 
