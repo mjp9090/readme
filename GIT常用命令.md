@@ -1,4 +1,4 @@
-![](https://i.imgur.com/k0yzJAo.png)
+![](http://img.zcool.cn/community/0142135541fe180000019ae9b8cf86.jpg@1280w_1l_2o_100sh.png)
 GIT常用命令
 ==========
 名词解释
