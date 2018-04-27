@@ -11,7 +11,7 @@ GIT常用命令
 
 ----------
 
-###配置
+###配置###
 
 - 查看配置文件:```git config --list```								
 - 查看全局配置文件: ```git config --list --global```					
@@ -20,11 +20,11 @@ GIT常用命令
 - 配置命令简称:```git config --global alias.st status```						
 - 把这个目录初始化为仓库:```git init```											
 
-######.gitignore文件作用：要忽略的文件名填进去，Git在提交时就会自动忽略这些文件。
+######.gitignore文件作用：要忽略的文件名填进去，Git在提交时就会自动忽略这些文件。######
 
 ----------
 
-###提交文件
+###提交文件###
 - 向暂存区中添加文件:												
  - 提交单个文件： ```git add build.gradle```
  - 提交目录：```git add app```											
@@ -56,9 +56,9 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###分支管理
+###分支管理###
 
-####本地分支（指向提交对象的一个可变指针）
+####本地分支（指向提交对象的一个可变指针）####
 - 创建分支:```git branch dev```										
 - 查看当前分支:```git branch```											
 - 切换到master分支:```git checkout master```									
@@ -67,14 +67,14 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 - 把dev分支合并到master分支上:```git merge dev```	合并时遇到冲突(CONFLICT)，手工解决冲突后在进行merge 	
 - 删除dev分支:```git branch -d dev```									
 
-####远程分支（指向远程仓库中文件的指针，实际开发中每一个本地分支都应该存在一个与远程分支的对应关系）
+####远程分支（指向远程仓库中文件的指针，实际开发中每一个本地分支都应该存在一个与远程分支的对应关系）####
 - 删除本地的远程分支:```git branch -r -D origin/BranchName	```				
 - 合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并:```git merge --no-ff -m "merge with no-ff" dev```而fast forward合并就看不出来曾经做过合并	
 - 用带参数的git log也可以看到分支的合并情况:```git log --graph --pretty=oneline --abbrev-commit```	
 
 ----------
 
-###远程库
+###远程库###
 - 创建SSH Key:```ssh-keygen -t rsa -C "youremail@example.com"```						
 - 本地库和远程库关联:```git remote add origin git@github.com:mjp9090/readme.git```				
 - 从远程库将代码下载到本地:```git clone git@github.com:mjp9090/readme.git```还可以用git clone https://github.com/michaelliao/gitskills.git这样的地址
@@ -90,7 +90,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###隐藏工作现场
+###隐藏工作现场###
 - 把当前工作现场“储藏”起来:```git stash```											
 - 查看储藏的工作现场:```git stash list```										
 - 恢复后，stash内容并不删除:```git stash apply```										
@@ -100,7 +100,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###标签
+###标签###
 - 创建带有说明的标签，用-a指定标签名，-m指定说明文字:```git tag -a v0.1 -m "version 0.1 released" //3628164```	
 - 推送全部尚未推送到远程的本地标签:```git push origin --tags```								
 - 查看所有标签:```git tag```												
@@ -114,7 +114,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###还原
+###还原###
 - 还原，HEAD表示当前版本：```git reset --hard HEAD```							
 	- 上一个版本:```HEAD^	```											
 	- 上两个版本:```HEAD^^```												
@@ -125,12 +125,12 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###删除
+###删除###
 - 从版本库中删除该文件:```git rm test.txt```										
 
 ----------
 
-###查看
+###查看###
 - 查看隐藏文件:```ls -ah``` 												
 - 查看当前状态:```git status```											
 - 查看没有添加至暂存区的修改:```git diff```											
@@ -144,6 +144,6 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ----------
 
-###显示		
+###显示###		
 - 让Git显示颜色，会让命令输出看起来更醒目:```git config --global color.ui true```					
 
