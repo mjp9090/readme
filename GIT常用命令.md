@@ -40,19 +40,16 @@ GIT常用命令
 		描述信息：subject
 
 git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。
-~~
-使用CZ需要先安装npm(此处未测试成功)
 
-git clone --recursive git://github.com/isaacs/npm.git
+~~使用CZ需要先安装npm(此处未测试成功)~~
 
-npm install -g commitizen
+~~git clone --recursive git://github.com/isaacs/npm.git~~
 
-commitizen init cz-conventional-changelog--save-exact
+~~npm install -g commitizen~~
 
-npm init
-~~
+:commitizen init cz-conventional-changelog--save-exact
 
-
+: npm init
 
 ----------
 
