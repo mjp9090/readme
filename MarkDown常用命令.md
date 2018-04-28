@@ -145,6 +145,3 @@ a
 a
 
 <a name="aa" />
-
-
-<p style="color:red;text-align:right;display:block">M</p>
