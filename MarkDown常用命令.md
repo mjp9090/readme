@@ -147,4 +147,4 @@ a
 <a name="aa" />
 
 
-<div style="color:red;text-align:right">M</div>
+<span style="color:red;text-align:right;display:block">M</span>
