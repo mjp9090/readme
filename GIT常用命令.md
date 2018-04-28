@@ -143,7 +143,3 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 ### 显示		
 - 让Git显示颜色，会让命令输出看起来更醒目:```git config --global color.ui true```
-
-
-
-<div style="color:#d49160;text-align:right">M</div>		
