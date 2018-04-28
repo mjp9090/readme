@@ -881,3 +881,6 @@ Symbols
 :small_red_triangle:
 :small_red_triangle_down:
 :shipit:
+
+
+<div style="color:#d49160;text-align:right">M</div>
