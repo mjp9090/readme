@@ -145,15 +145,3 @@ a
 a
 
 <a name="aa" />
-
-
-
-| Name | Academy | score | 
-| - | :-: | -: | 
-| Harry Potter | Gryffindor| 90 | 
-| Hermione Granger | Gryffindor | 100 | 
-| Draco Malfoy | Slytherin | 90 |
-
-| Tables        | Are           | Cool  |	
-| ------------- |:-------------:| -----:|	
-| col 3 is      | right-aligned | $1600 |
